@@ -8,6 +8,8 @@ const Form = ({ setArticles, articles, id, setId }) => {
     setId(id + 1);
     const newEntry = { id, title, description };
     setArticles([...articles, newEntry]);
+    setTitle("");
+    setDescription("");
   };
 
   return (
@@ -18,6 +20,7 @@ const Form = ({ setArticles, articles, id, setId }) => {
           <input
             type="text"
             className="form-control"
+            value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
         </div>
@@ -26,6 +29,7 @@ const Form = ({ setArticles, articles, id, setId }) => {
           <textarea
             type="text"
             className="form-control"
+            value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
         </div>

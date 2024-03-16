@@ -12,7 +12,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App position-relative">
       {/* In this project I used PROPS only */}
       <Form
         setArticles={setArticles}
@@ -20,7 +20,11 @@ function App() {
         id={id}
         setId={setId}
       />
-      <Articles articles={articles} handleDeleteArticle={handleDeleteArticle} />
+      <Articles
+        articles={articles}
+        setArticles={setArticles}
+        handleDeleteArticle={handleDeleteArticle}
+      />
     </div>
   );
 }
